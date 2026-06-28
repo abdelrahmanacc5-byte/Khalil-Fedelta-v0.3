@@ -311,6 +311,8 @@ renderProducts();
 
 updateCart();
 
+showToast("Prodotto aggiunto al carrello");
+
 }
 /*=========================================
 UPDATE CART
