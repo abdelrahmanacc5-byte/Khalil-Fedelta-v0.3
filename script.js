@@ -530,3 +530,36 @@ toast.classList.remove("show");
 },2500);
 
 }
+function showProduct(id){
+
+const product=products.find(p=>p.id===id);
+
+if(!product) return;
+
+document.getElementById("modalImage").src=product.image;
+
+document.getElementById("modalName").innerText=product.name;
+
+document.getElementById("modalCategory").innerText=product.category;
+
+document.getElementById("modalPrice").innerText="€ "+product.price;
+
+document.getElementById("modalStock").innerText="Disponibili: "+product.stock;
+
+document.getElementById("modalBuy").onclick=()=>{
+
+addToCart(product.id);
+
+closeProductModal();
+
+};
+
+document.getElementById("productModal").style.display="flex";
+
+}
+
+function closeProductModal(){
+
+document.getElementById("productModal").style.display="none";
+
+}
