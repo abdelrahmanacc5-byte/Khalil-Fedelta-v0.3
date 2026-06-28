@@ -123,7 +123,11 @@ productsContainer.innerHTML += `
 
 ${product.badge ? `<div class="badge">${product.badge}</div>` : ""}
 
-<img src="${product.image}" alt="${product.name}">
+<img
+src="${product.image}"
+alt="${product.name}"
+onclick="showProduct(${product.id})"
+style="cursor:pointer">
 
 <h3>${product.name}</h3>
 
