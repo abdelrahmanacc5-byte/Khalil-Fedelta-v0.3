@@ -505,3 +505,26 @@ window.open(
 );
 
 }
+/*=========================================
+TOAST
+=========================================*/
+
+function showToast(message){
+
+const toast = document.getElementById("toast");
+
+const toastText = document.getElementById("toastText");
+
+if(!toast) return;
+
+toastText.innerText = message;
+
+toast.classList.add("show");
+
+setTimeout(()=>{
+
+toast.classList.remove("show");
+
+},2500);
+
+}
